@@ -1,0 +1,9 @@
+query AlphaCentauri {
+  blogs {
+    title
+    content
+    author {
+      username
+    }
+  }
+}
