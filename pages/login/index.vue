@@ -1,3 +1,3 @@
 <template>
-  <p>ABOUT</p>
+    <h1>LOGIN</h1>
 </template>

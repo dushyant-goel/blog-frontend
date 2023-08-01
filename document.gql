@@ -1,9 +1,23 @@
-query AlphaCentauri {
+query ListBlogs {
   blogs {
     title
     content
     author {
       username
     }
+  }
+}
+
+query GetBlogsById {
+  blogs {
+    title
+    content
+  }
+}
+
+query ListUsers {
+  users {
+    username
+    password
   }
 }
