@@ -30,3 +30,15 @@ query GetUser($id: Float!) {
     }
   }
 }
+
+mutation CreateBlog($title: String!, $content: String!, $authorId: Float!) {
+  createBlog(title: $title, content: $content, authorId: $authorId) {
+    title
+  }
+}
+
+mutation SignIn($username: String!, $password: String!) {
+  signin(username: $username, password: $password) {
+    token 
+  }
+}
