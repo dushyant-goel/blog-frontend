@@ -1,4 +1,4 @@
 <template>
-    <h1>LOGIN</h1>
+    <h1>Login Page</h1>
 </template>
 

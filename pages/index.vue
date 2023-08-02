@@ -1,24 +1,7 @@
 <template>
-    <div>
-        <h2>Bloggin'</h2>
-    </div>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <NuxtLink to="/about">About</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/signin">Sign In</NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/home">Home</NuxtLink>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <h2>Graphic</h2>
 </template>
   
 <script setup>
-    
+
 </script>
