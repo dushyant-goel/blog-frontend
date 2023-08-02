@@ -10,6 +10,7 @@
             {{ entry.content }}
         </p>
         </p>
+        
 
     </div>
 </template>

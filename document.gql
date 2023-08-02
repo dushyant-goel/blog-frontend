@@ -8,8 +8,8 @@ query ListBlogs {
   }
 }
 
-query GetBlogsById {
-  blogs {
+query GetBlog($id: Float!) {
+  getBlog(id: $id) {
     title
     content
   }
@@ -19,5 +19,14 @@ query ListUsers {
   users {
     username
     password
+  }
+}
+
+query GetUser($id: Float!) {
+  getUser(id: $id) {
+    username
+    blogs {
+      title
+    }
   }
 }
