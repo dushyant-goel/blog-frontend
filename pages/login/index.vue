@@ -7,6 +7,8 @@
   <input v-model="passwordRef" type="password">
   <button @click="handleLogIn">Login</button>
 
+  <p>{{ token }}</p>
+
 </template>
 
 <script setup lang="ts">
@@ -14,11 +16,17 @@ import { ref } from 'vue'
 
 let usernameRef = ref("")
 let passwordRef = ref("")
+let token = ref("")
 
-function handleLogIn() {
+async function handleLogIn() {
   const username: string = usernameRef.value;
   const password: string = passwordRef.value;
 
-  GqlSignIn({username, password});
+  let { data } = await useAsyncGql({
+        operation: 'SignIn',
+        variables: { username: username, password: password },
+    })
+  
+  token = ref(data.value.signin.token);
 }
 </script>
