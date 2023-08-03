@@ -1,7 +1,7 @@
 <template>
-    <h1>#{{ id }} {{ data?.getBlog.title }} </h1>
-    <div>
-        <p> {{ data?.getBlog.content }} </p>
+    <h1 class="text-3xl font-bold mb-4"># {{ data?.getBlog.title }} </h1>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700"> {{ data?.getBlog.content }} </p>
     </div>
 </template>
 

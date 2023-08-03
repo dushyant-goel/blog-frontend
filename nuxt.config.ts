@@ -4,7 +4,13 @@ import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["nuxt-graphql-client", "@nuxtjs/tailwindcss"],
+  modules: ["nuxt-graphql-client", "@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  imports: {
+    dirs: ['./stores']
+  },
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate']
+  },
   devServer: { port: 4000 },
   runtimeConfig: {
     public: {

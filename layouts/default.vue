@@ -11,7 +11,10 @@
                 <li class="hover:underline">
                     <NuxtLink to="/about">About</NuxtLink>
                 </li>
-                <li class="hover:underline">
+                <li v-if="token" class="hover:underlin">
+                    Log Out
+                </li>
+                <li v-else class="hover:underline">
                     <NuxtLink to="/login">Sign In</NuxtLink>
                 </li>
             </ul>
@@ -23,3 +26,8 @@
         <slot />
     </div>
 </template>
+
+<script setup>
+const store = useTokenStore();
+const token = ref(store.token);
+</script>
